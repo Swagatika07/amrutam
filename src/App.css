@@ -209,6 +209,7 @@ h5 {
   line-height: 24px; 
 }
 .appt-btn {
+  cursor: pointer;
   display: flex;
   width: 274px;
   height: 49px;
@@ -663,6 +664,7 @@ h5 {
   justify-content: space-between;
 }
 .opt-btn {
+  cursor: pointer;
   display: flex;
   padding: 21px 43px 12px 44px;
   flex-direction: column;
@@ -675,6 +677,7 @@ h5 {
   flex-shrink: 0;
 }
 .opt-btn-active {
+  cursor: pointer;
   display: flex;
   padding: 21px 43px 12px 44px;
   flex-direction: column;
@@ -730,6 +733,7 @@ h5 {
   gap: 22px;
 }
 .slot-btn {
+  cursor: pointer;
   display: flex;
   padding: 11px 12px 8px 12px;
   flex-direction: column;
@@ -742,6 +746,7 @@ h5 {
   background: #f2fbf2;
 }
 .slot-btn-inactive {
+  cursor: pointer;
   display: flex;
   padding: 11px 12px 8px 12px;
   flex-direction: column;
@@ -822,6 +827,7 @@ h5 {
   flex-wrap: wrap;
 }
 .morning-times {
+  cursor: pointer;
   display: flex;
   width: 106px;
   height: 47px;

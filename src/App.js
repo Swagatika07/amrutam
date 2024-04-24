@@ -3,8 +3,6 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ProfileBanner from './components/ProfileBanner';
-import Desktop from './components/Desktop';
-import Hero from './components/Hero';
 import FindDoctor from './components/FindDoctor';
 import About from './components/About';
 

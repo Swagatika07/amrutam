@@ -25,7 +25,7 @@ const RightHero = () => {
     const handleClick = (index) => {
       setClickedIndex(index);
     };
-    const [clickedIndexTime,setClickedIndexTime]= useState(null);
+    const [clickedIndexTime,setClickedIndexTime]= useState(5);
     const [clickedIndexeTime,setClickedIndexeTime]= useState(null);
     const morningTime = ['09.00 AM','09.30 AM','10.00 AM','10.15 AM','10.45 AM','11.00 AM'];
     const mTimes = [
@@ -39,7 +39,7 @@ const RightHero = () => {
     // const items = ['Item 1', 'Item 2', 'Item 3'];
 
     const handleClickTime = (index) => {
-      setClickedIndexTime((index === clickedIndexTime) ? null : index);
+      setClickedIndexTime((index === clickedIndexTime) ? 5 : index);
       console.log('clicked');
       console.log(clickedIndexTime);
       console.log(index);
@@ -151,9 +151,9 @@ const RightHero = () => {
      </div>
      <motion.div className='make-apt'
      whileHover={{ scale: 1.01, boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)" }} // Scale up and add shadow on hover
-     whileTap={{ scale: 0.9 }} // Scale down when tapped
-     initial={{ opacity: 0, y: 20 }} // Initial opacity and y position
-     animate={{ opacity: 1, y: 0 }} // Animate opacity and y position
+     whileTap={{ scale: 0.9 }}
+     initial={{ opacity: 0, y: 20 }}
+     animate={{ opacity: 1, y: 0 }}
      transition={{ duration: 0.5 }} >
      Make an appointment
      </motion.div>
