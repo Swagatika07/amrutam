@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 const Navbar = () => {
-  const [activeItem, setActiveItem] = useState('');
+  const [activeItem, setActiveItem] = useState('Home');
 
   const handleItemClick = (itemName) => {
     setActiveItem(itemName);

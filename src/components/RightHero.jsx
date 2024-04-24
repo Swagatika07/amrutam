@@ -59,7 +59,10 @@ const RightHero = () => {
       console.log(index);
     };
   return (
-    <div className='right-hero-wrapper'>
+    <motion.div className='right-hero-wrapper' 
+    initial={{opacity: 0, x:100}}
+    animate={{ opacity: 1, x: 0}}
+    transition={{ duration: 1.0 }}>
       <div className='appointment-header'>
       <p className='a-fee'>Appointment Fee</p>
       <p className='fee'>₹699.00</p>
@@ -154,7 +157,7 @@ const RightHero = () => {
      transition={{ duration: 0.5 }} >
      Make an appointment
      </motion.div>
-    </div>
+    </motion.div>
   )
 }
 

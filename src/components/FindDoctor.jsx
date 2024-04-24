@@ -4,6 +4,7 @@ import Doctor from "../assets/Doctor.svg";
 import Pin from "../assets/Pin.svg";
 import Grad from "../assets/Grad.svg";
 import Comment from "../assets/Comment.png";
+import {motion} from 'framer-motion';
 const FindDcotor = () => {
   const FilterBtn = (props) => {
     return (
@@ -31,7 +32,10 @@ const FindDcotor = () => {
   let counts = [1,2,3];
   return (
     <>
-      <div
+      <motion.div
+      initial={{opacity: 0, y:-100}}
+    animate={{ opacity: 1, y: 0}}
+    transition={{ duration: 1.0 }}
         className="find-doctor-wrapper"
         style={{ backgroundImage: "url(" + BG + ")" }}
       >
@@ -84,8 +88,11 @@ const FindDcotor = () => {
             </svg>
           </div>
         </div>
-      </div>
-      <div className="filters">
+      </motion.div>
+      <motion.div className="filters"
+      initial={{opacity: 0, x:-100}}
+    animate={{ opacity: 1, x: 0}}
+    transition={{ duration: 1.0 }}>
         <div className="fbtn-container">
           <FilterBtn name="Expertise" />
           <FilterBtn name="Gender" />
@@ -110,8 +117,11 @@ const FindDcotor = () => {
             </svg>
           </div>
         </div>
-      </div>
-      <div className="filter-list-wrapper">
+      </motion.div>
+      <motion.div className="filter-list-wrapper"
+      initial={{opacity: 0, x:100}}
+    animate={{ opacity: 1, x: 0}}
+    transition={{ duration: 1.0 }}>
         <div className="filter-list">
           {itms.map((itm) => (
             <div className="filter-list-btn">
@@ -139,11 +149,16 @@ const FindDcotor = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     
       <div className="profile-card-wrapper">
       {counts.map(count=>(
-        <div className="profile-card-container">
+        <motion.div 
+        initial={{ opacity: 0, rotateY: 180 }}
+            animate={{ opacity: 1, rotateY: 0 }}
+            exit={{ opacity: 0, rotateY: 180 }}
+            transition={{ duration: 1.0 }}
+            className="profile-card-container">
           <div className="profile-card">
             <div className="profile-upper">
               <div className="profile-pic-section">
@@ -201,7 +216,7 @@ const FindDcotor = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       ))}
       </div>
       

@@ -11,6 +11,7 @@ import hair from "../assets/Hair.svg";
 import org from '../assets/org.svg';
 import reviewer from '../assets/reviewer.svg';
 import star from '../assets/star.svg';
+import {motion} from 'framer-motion';
 const SpecCard = (props) =>{
     return(
         <div className="spec-container">
@@ -30,7 +31,9 @@ const TreatBtn = (props) => {
 }
 const LeftHero = () => {
   return (
-    <div className="left-hero-wrapper">
+    <motion.div initial={{opacity: 0, x:-100}}
+    animate={{ opacity: 1, x: 0}}
+    transition={{ duration: 1.0 }} className="left-hero-wrapper">
       <div className="about-me">
         <div className="little-bit-of-me">
           <p>A Little About Me</p>
@@ -162,7 +165,7 @@ const LeftHero = () => {
         </div>
         
        
-    </div>
+    </motion.div>
   );
 };
 

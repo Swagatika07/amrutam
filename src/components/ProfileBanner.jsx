@@ -9,7 +9,10 @@ const ProfileBanner = () => {
   const items = [1, 2, 3, 4];
   return (
     <>
-    <div className="profile-banner-wrapper">
+    <motion.div className="profile-banner-wrapper" 
+    initial={{opacity: 0, y:-100}}
+    animate={{ opacity: 1, y: 0}}
+    transition={{ duration: 1.0 }}>
       <img src={banner} alt="banner" style={{ width: "85.5vw" }} />
       <img
         className="profile-pic"
@@ -56,7 +59,7 @@ const ProfileBanner = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
     <Hero/>
     </>
   );
